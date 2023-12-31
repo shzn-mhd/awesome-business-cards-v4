@@ -1,0 +1,179 @@
+<DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+
+            <style>
+                body {
+                    font-size: Arial;
+                    margin: 0;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }
+                .businesscard {
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    height: 520px;
+                    width: 300px;
+                    border: 2px solid #3496db;
+                    box-shadow:0 4px 8px rgba(0, 0, 0,0.1);
+                    border-radius: 10px;
+                    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+                    overflow: hidden;
+                    position: relative;
+                    animation: rotateBorderColor 10s infinite linear;
+                }
+
+                .profileimage {
+                    width: 100%;
+                    height: 100%;
+                    
+                    
+
+                }
+
+                .header{
+                    background-color: #3496db;
+                    color: white;
+                    padding: 15px;
+                    text-align: center;
+                    font-size: 25px;
+
+                }
+
+                .contactinfo{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 15px;
+                }
+
+                .name{
+                    font-size: 1.5em;
+                    margin-top:10px ;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                }
+
+                .jobtitle {
+                    font-size: 1em;
+                    color: #555;
+                    margin-bottom: 10px;
+                }
+
+                .contactdetails {
+                  margin-bottom: 5px;  
+                }
+
+                .sociallinks {
+                    margin-top: 10px;
+                
+                }
+
+                .sociallinks a{
+                    margin-right: 10px;
+                    text-decoration: none;
+                    color: #3498db;
+                }
+
+                .businesscard:hover{
+                    transform: scale(1.05);
+                    /* border: 4px solid red; */
+                    animation: rotateBorderColor 10s infinite linear;
+                }
+
+                .skillcard{
+                    top: 48px;
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.3);
+                    width: 100%;
+                    backdrop-filter: blur(40px);
+                    height: 0%;
+                    overflow: hidden;
+                    transition: height 0.3s ease-in-out;
+                }
+
+                .skilltitle {
+                    margin-left: 30px;
+                    font-size: 20px;
+                    margin-top: 70px;
+                    font-weight: bold;
+                }
+
+                .skillcard ul{
+                    margin-left: 30px;
+                }
+                .skillcard li{
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+
+                .businesscard:hover .skillcard{
+                    height: 82%;
+                }
+
+                /* Add key frames for rotate border colors */
+                @keyframes rotateBorderColor{
+                    0% {
+                        box-shadow: 0 0 40px rgba(255, 0,0, 0.5);
+                    }
+
+                    25% {
+                        box-shadow: 0 0 40px rgba(255, 204,0, 0.5);
+                    }
+
+                    50% {
+                        box-shadow: 0 0 40px rgba(0, 255,0, 0.5);
+                    }
+
+                    75% {
+                        box-shadow: 0 0 40px rgba(51, 153,255, 0.5);
+                    }
+
+                    100% {
+                        box-shadow: 0 0 40px rgba(255, 0,0, 0.5);
+                    }
+                }
+
+            </style>
+        </head>
+        <body>
+            <div class="businesscard">
+                <div class="header"> <marquee>Business Card </marquee></div>
+                <div class="contactinfo">
+                    <img class="profileimage" src="Shazan.JPG" alt="" />
+                    <div class="name">Mohamed Shazan</div>
+                    <div class="jobtitle">Fullstack Developer</div>
+                    <div class="contactdetails">
+                        <div>Email: mohamadshazan221@gmail.com</div>
+                        <div>Phone: 07799914186</div>
+                        <div>Address: Ratnapura</div>
+                    </div>
+                    <div class="sociallinks">
+                        <a href="">LinkedIn</a>
+                        <a href="www.twitter.com">Twitter</a>
+                        <a href="github.com/shzn-mhd">Github</a>
+                    </div>
+                    </div>
+                    <div class="skillcard">
+                        <div class="skilltitle">My Skills</div>
+                    
+                        <ul>
+                            <li>ReactJS</li>
+                            <li>Laravel</li>
+                            <li>.net</li>
+                            <li>Springboot</li>
+                            <li>NodeJS</li>
+                            <li>ReactNative</li>
+                        </ul>
+                    </div> 
+                </div>
+
+        </body>
+        </html>
